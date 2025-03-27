@@ -1,0 +1,126 @@
+.automation-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #fff9c4, #ffe082); /* Yellowish gradient background */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.automation-container h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #b71c1c; /* Dark red for heading */
+    margin-bottom: 20px;
+    text-align: left;
+    text-shadow: none;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-area label {
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
+    margin-right: 10px;
+}
+
+.input-area input[type="text"] {
+    padding: 8px 10px;
+    margin-right: 10px;
+    border: 1px solid #ffd54f; /* Light yellow border */
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #fffde7; /* Lightest yellow background */
+    width: 200px;
+}
+
+.input-area input[type="text"]:focus {
+    outline: none;
+    border-color: #ffc107; /* Yellow focus border */
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+}
+
+.input-area button {
+    padding: 8px 12px;
+    background: linear-gradient(to right, #b71c1c, #d32f2f); /* Red gradient button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+}
+
+.input-area button::after {
+    content: '→';
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.input-area button:disabled {
+    background: #e0e0e0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.input-area button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.progress-bar {
+    background-color: #fff8e1; /* Light yellow progress bar */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color: #e65100; /* Orange text */
+    font-weight: 500;
+}
+
+.response-area {
+    margin-top: 20px;
+    border: 1px solid #ffeb3b; /* Yellow border */
+    padding: 15px;
+    background-color: #fffde7; /* Lightest yellow background */
+    border-radius: 4px;
+}
+
+.response-area h2 {
+    font-size: 1.2em;
+    color: #b71c1c; /* Dark red response heading */
+    margin-bottom: 15px;
+}
+
+.response-area textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #ffd54f; /* Light yellow text area border */
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    background-color: white;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.response-area textarea:focus {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+}

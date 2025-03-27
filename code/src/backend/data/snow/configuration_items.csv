@@ -1,0 +1,31 @@
+id,name,description,host,owner,upstream_ids,downstream_ids,created_date,updated_date
+CMDBCI0001,Web Server 01,Primary web server for customer portal,web01.example.com,IT Operations,"CMDBCl00003, CMDBCl00010","CMDBCl00002, CMDBCl00009",2024-07-15 10:00:00,2024-07-15 10:00:00
+CMDBCI0002,Database Server 02,Secondary database server for application data,db02.example.com,Database Admins,CMDBCl00001,"CMDBCl00011, CMDBCl00013",2024-08-01 14:30:00,2024-08-01 14:30:00
+CMDBCI0003,Network Switch 03,Core network switch in the data center,switch03.example.com,Network Engineers,,"CMDBCl00001, CMDBCl00004, CMDBCl00006, CMDBCl00010",2024-09-10 09:15:00,2024-09-10 09:15:00
+CMDBCI0004,Laptop User 04,Standard user laptop for employee access,laptop04.example.com,End User Support,CMDBCl00003,CMDBCl00024,2024-10-20 16:45:00,2024-10-20 16:45:00
+CMDBCI0005,Email Server 05,Primary email server for internal communications,mail05.example.com,Email Administrators,CMDBCl00006,,2024-11-05 11:00:00,2024-11-05 11:00:00
+CMDBCI0006,Firewall 06,Main firewall protecting the internal network,firewall06.example.com,Security Team,CMDBCl00003,"CMDBCl00005, CMDBCl00025",2024-12-12 13:20:00,2024-12-12 13:20:00
+CMDBCI0007,Virtual Machine 07,Virtual machine hosting a test application,vm07.example.com,Development Team,CMDBCl00008,,2025-01-18 17:00:00,2025-01-18 17:00:00
+CMDBCI0008,Storage Array 08,Centralized storage array for application data,storage08.example.com,Storage Admins,,"CMDBCl00007, CMDBCl00022",2025-02-22 08:45:00,2025-02-22 08:45:00
+CMDBCI0009,Desktop User 09,Standard user desktop for administrative tasks,desktop09.example.com,End User Support,"CMDBCl00010, CMDBCl00001",,2025-03-03 12:30:00,2025-03-03 12:30:00
+CMDBCI00010,Load Balancer 10,Load balancer distributing traffic to web servers,lb10.example.com,Network Engineers,CMDBCl00003,"CMDBCl00001, CMDBCl00009",2025-03-15 15:50:00,2025-03-15 15:50:00
+CMDBCI00011,Trading System Alpha,Primary platform for equity trading,trade-alpha.finance.com,Front Office Trading,CMDBCl00012,,2024-07-15 10:00:00,2024-07-15 10:00:00
+CMDBCI00012,Transaction Database Beta,Main database for storing all transaction records,txn-db-beta.finance.com,Settlements Team,,"CMDBCl00011, CMDBCl00013",2024-08-01 14:30:00,2024-08-01 14:30:00
+CMDBCI00013,Risk Management Server Gamma,Server dedicated to calculating and monitoring financial risks,risk-gamma.finance.com,Risk Management Department,CMDBCl00012,CMDBCl00016,2024-09-10 09:15:00,2024-09-10 09:15:00
+CMDBCI00014,Customer Portal Web,External facing web portal for customer account access,portal.finance.com,Retail Banking Division,CMDBCl00015,,2024-10-20 16:45:00,2024-10-20 16:45:00
+CMDBCI00015,Payment Gateway Delta,System responsible for processing incoming and outgoing payments,gateway-delta.finance.com,Payment Operations,,CMDBCl00014,2024-11-05 11:00:00,2024-11-05 11:00:00
+CMDBCI00016,Reporting Server Epsilon,Server used for generating daily and monthly financial reports,report-epsilon.finance.com,Financial Reporting,CMDBCl00013,,2024-12-12 13:20:00,2024-12-12 13:20:00
+CMDBCI00017,Mobile Banking App,Mobile application for customers to manage their accounts,mobile-app.finance.com,Digital Banking Team,CMDBCl00018,,2025-01-18 17:00:00,2025-01-18 17:00:00
+CMDBCI00018,Compliance Audit System Zeta,System used for monitoring and ensuring regulatory compliance,audit-zeta.finance.com,Compliance Department,,CMDBCl00017,2025-02-22 08:45:00,2025-02-22 08:45:00
+CMDBCI00019,ATM Network Controller,Central controller managing all ATM transactions,atm-controller.finance.com,ATM Operations,CMDBCl00020,,2025-03-03 12:30:00,2025-03-03 12:30:00
+CMDBCI00020,Fraud Detection System Eta,System for real-time monitoring and detection of fraudulent activities,fraud-eta.finance.com,Security and Fraud Prevention,,CMDBCl00019,2025-03-15 15:50:00,2025-03-15 15:50:00
+CMDBCI00021,HRIS Application Server,Server hosting the main Human Resources Information System,hris-app-01.example.com,HR IT Support,"CMDBCl00022, CMDBCl00023",,2024-07-15 10:00:00,2024-07-15 10:00:00
+CMDBCI00022,Payroll Database Server,Server hosting the database for payroll processing,payroll-db-01.example.com,Payroll Department,CMDBCl00008,CMDBCl00021,2024-08-01 14:30:00,2024-08-01 14:30:00
+CMDBCI00023,Employee Portal Web Server,Web server hosting the employee self-service portal,employee-portal.example.com,HR Communications,,"CMDBCl00021, CMDBCl00024",2024-09-10 09:15:00,2024-09-10 09:15:00
+CMDBCI00024,Laptop - John Smith,Company-issued laptop for John Smith (HR Manager),john.smith-laptop,HR Department,"CMDBCl00004, CMDBCl00023","CMDBCl00025, CMDBCl00030",2024-10-20 16:45:00,2024-10-20 16:45:00
+CMDBCI00025,Network Share - HR Documents,Shared network location for HR-related documents,fileserver-01.example.com,HR Department,"CMDBCl00006, CMDBCl00024",,2024-11-05 11:00:00,2024-11-05 11:00:00
+CMDBCI00026,Time Tracking System Server,Server for the employee time tracking and attendance system,time-track-01.example.com,HR Operations,CMDBCl00027,,2024-12-12 13:20:00,2024-12-12 13:20:00
+CMDBCI00027,Recruitment Application Server,Server hosting the online recruitment and applicant tracking system,recruit-app-01.example.com,Talent Acquisition,,CMDBCl00026,2025-01-18 17:00:00,2025-01-18 17:00:00
+CMDBCI00028,Benefits Administration System,External system accessed for managing employee benefits,benefits.external.com,HR Benefits Team,CMDBCl00029,,2025-02-22 08:45:00,2025-02-22 08:45:00
+CMDBCI00029,HR Reporting Server,Server dedicated to generating HR-related reports and analytics,hr-report-01.example.com,HR Analytics,,CMDBCl00028,2025-03-03 12:30:00,2025-03-03 12:30:00
+CMDBCI00030,Email Account - HR Department,Shared email account for the HR department,hr.department@example.com,HR Department,CMDBCl00024,,2025-03-15 15:50:00,2025-03-15 15:50:00

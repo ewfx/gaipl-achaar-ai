@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agentic Search Chat</title>
+  <style>
+    #chat-container {
+      width: 500px;
+      border: 1px solid #ccc;
+      height: 400px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    #input-container {
+      width: 500px;
+      margin-top: 10px;
+    }
+    #message-input {
+      width: 80%;
+      padding: 5px;
+    }
+    #send-button {
+      width: 18%;
+      padding: 5px;
+    }
+    .message {
+      margin-bottom: 5px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .user-message {
+      background-color: #e0f7fa;
+      text-align: right;
+    }
+    .bot-message {
+      background-color: #f0f0f0;
+    }
+    .progress-container {
+      margin-bottom: 5px;
+    }
+    .source-progress {
+      margin-bottom: 8px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    /* Styles for moving dots */
+    @keyframes blink {
+      0%, 20% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+    .loading-dots span {
+      display: inline-block;
+      animation: blink 1.5s infinite;
+    }
+    .loading-dots span:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .loading-dots span:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    .loading-dots span:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container"></div>
+  <div id="input-container">
+    <input type="text" id="message-input" placeholder="Enter your query...">
+    <button id="send-button">Send</button>
+  </div>
+
+  <script>
+    const chatContainer = document.getElementById('chat-container');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    let socket;
+    let searchId;
+    let progressContainer;
+    const sourceProgressElements = {}; // store persistent progress elements for each source
+
+    sendButton.addEventListener('click', () => {
+      const message = messageInput.value;
+      if (message) {
+        appendMessage(message, 'user-message');
+        messageInput.value = '';
+        sendSearchRequest(message);
+      }
+    });
+
+    function appendMessage(text, className) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', className);
+      messageDiv.textContent = text;
+      chatContainer.appendChild(messageDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function sendSearchRequest(query) {
+      fetch('http://localhost:8000/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: query })
+      })
+      .then(response => response.json())
+      .then(data => {
+        searchId = data.searchId;
+        connectWebSocket(searchId);
+      });
+    }
+
+    function connectWebSocket(searchId) {
+      socket = new WebSocket(`ws://localhost:8000/ws/search/${searchId}`);
+
+      socket.onopen = () => {
+        console.log('WebSocket connection established');
+        // Create a container for progress elements if not already present.
+        if (!progressContainer) {
+          progressContainer = document.createElement('div');
+          progressContainer.classList.add('progress-container');
+          chatContainer.appendChild(progressContainer);
+        }
+      };
+
+      socket.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        console.log('Received update:', data);
+        updateProgress(data);
+        if (data.status === 'completed') {
+          // Append final results to the chat
+          for (const source in data.results) {
+            appendMessage(`${source}: ${data.results[source]}`, 'bot-message');
+          }
+        }
+      };
+
+      socket.onclose = () => {
+        console.log('WebSocket connection closed');
+      };
+
+      socket.onerror = (error) => {
+        console.error('WebSocket error:', error);
+      };
+    }
+
+    // Update or create progress elements per source based on realtime updates.
+    function updateProgress(data) {
+      data.details.forEach(detail => {
+        // Only show items that are active or completed.
+        if (detail.status === 'pending') {
+          if (sourceProgressElements[detail.source]) {
+            sourceProgressElements[detail.source].style.display = 'none';
+          }
+          return;
+        } else {
+          if (sourceProgressElements[detail.source]) {
+            sourceProgressElements[detail.source].style.display = '';
+          }
+        }
+
+        let sourceProgress;
+        if (sourceProgressElements[detail.source]) {
+          sourceProgress = sourceProgressElements[detail.source];
+        } else {
+          // Create a container for this source's progress status.
+          sourceProgress = document.createElement('div');
+          sourceProgress.classList.add('source-progress');
+          progressContainer.appendChild(sourceProgress);
+          sourceProgressElements[detail.source] = sourceProgress;
+        }
+
+        // Update the status text.
+        if (detail.status === 'completed') {
+          sourceProgress.textContent = `searched ${detail.source}`;
+        } else if (detail.status === 'in_progress') {
+          // Create moving dots indicator
+          sourceProgress.innerHTML = `searching ${detail.source} <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>`;
+        }
+      });
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+  </script>
+</body>
+</html>

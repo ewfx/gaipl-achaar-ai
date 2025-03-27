@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Chat</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #messages { border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; margin-bottom: 10px; }
+        input, button { padding: 5px; }
+    </style>
+</head>
+
+<body>
+    <h2>MCP Chat Interface</h2>
+    <div id="messages"></div>
+    <input type="text" id="userInput" placeholder="Type your message" />
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        const messagesDiv = document.getElementById('messages');
+
+        // --- Connect WebSocket ---
+        const ws = new WebSocket("ws://localhost:5002/ws");
+
+        ws.onmessage = (event) => {
+            const msg = JSON.parse(event.data);
+            const div = document.createElement("div");
+            if (msg.type === "tool_event") {
+                div.innerHTML = `<b>🛠 Tool Event:</b> ${JSON.stringify(msg.data)}`;
+            } else if (msg.type === "assistant_message") {
+                div.innerHTML = `<b>🤖 Assistant:</b> ${msg.data}`;
+            }
+            messagesDiv.appendChild(div);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        };
+
+        // --- Send message via REST API ---
+        async function sendMessage() {
+            const input = document.getElementById("userInput").value;
+            if (!input) return;
+
+            const div = document.createElement("div");
+            div.innerHTML = `<b>🧑 You:</b> ${input}`;
+            messagesDiv.appendChild(div);
+
+            const response = await fetch("http://localhost:5002/mcp_chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user_input: input })
+            });
+
+            const data = await response.json();
+            console.log(data);
+            document.getElementById("userInput").value = "";
+        }
+    </script>
+</body>
+
+</html>

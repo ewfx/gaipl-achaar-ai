@@ -1,0 +1,31 @@
+id,name,description,created_date,updated_date
+WRK_AROUND_1,Temporary Network Fix,Rebooted the affected network switch to restore connectivity.,2025-03-20 09:00:00,2025-03-20 09:00:00
+WRK_AROUND_2,Application Restart,Restarted the application service to resolve the error.,2025-03-20 10:15:00,2025-03-20 10:15:00
+WRK_AROUND_3,DNS Flush,Flushed the DNS cache on the affected machine.,2025-03-20 11:30:00,2025-03-20 11:30:00
+WRK_AROUND_4,Rollback Configuration,Reverted to the previous configuration to resolve the issue.,2025-03-21 13:45:00,2025-03-21 13:45:00
+WRK_AROUND_5,Service Account Reset,Reset the password for the service account.,2025-03-21 15:00:00,2025-03-21 15:00:00
+WRK_AROUND_6,Patch Application,Applied a temporary patch to address the vulnerability.,2025-03-22 16:15:00,2025-03-22 16:15:00
+WRK_AROUND_7,Increase Timeout Value,Increased the timeout value for the affected service.,2025-03-22 17:30:00,2025-03-22 17:30:00
+WRK_AROUND_8,Restart Web Server,Performed a graceful restart of the web server.,2025-03-23 08:00:00,2025-03-23 08:00:00
+WRK_AROUND_9,Clear Cache,Cleared the application's internal cache.,2025-03-23 09:15:00,2025-03-23 09:15:00
+WRK_AROUND_10,Disable Feature,Temporarily disabled a problematic feature.,2025-03-23 10:30:00,2025-03-23 10:30:00
+WRK_AROUND_11,Manual Trade Execution,Traders are manually executing trades due to system issues.,2025-03-20 09:00:00,2025-03-20 09:00:00
+WRK_AROUND_12,Reverted to Previous Reporting,Financial reporting team has reverted to the previous day's report generation system.,2025-03-20 10:15:00,2025-03-20 10:15:00
+WRK_AROUND_13,Processed Payments in Batch,Payment operations processed pending payments in a manual batch due to gateway issues.,2025-03-20 11:30:00,2025-03-20 11:30:00
+WRK_AROUND_14,Temporary Risk Calculation Script,Risk team implemented a temporary script to calculate overnight risk exposure.,2025-03-21 13:45:00,2025-03-21 13:45:00
+WRK_AROUND_15,Customer Verification Override,Customer service agents are temporarily overriding the automated verification process for urgent cases.,2025-03-21 15:00:00,2025-03-21 15:00:00
+WRK_AROUND_16,ATM Cash Withdrawal Limit Reduced,ATM network operations temporarily reduced the daily withdrawal limit.,2025-03-22 16:15:00,2025-03-22 16:15:00
+WRK_AROUND_17,Manual Reconciliation,Settlements team is performing manual reconciliation of transaction data.,2025-03-22 17:30:00,2025-03-22 17:30:00
+WRK_AROUND_18,Disabled Mobile Deposit Feature,Digital banking team temporarily disabled the mobile check deposit feature.,2025-03-23 08:00:00,2025-03-23 08:00:00
+WRK_AROUND_19,Alerts Manually Monitored,Fraud detection system alerts are being manually reviewed by the security team.,2025-03-23 09:15:00,2025-03-23 09:15:00
+WRK_AROUND_20,Rolled Back Trading Algorithm,Front office trading rolled back the latest trading algorithm due to performance issues.,2025-03-23 10:30:00,2025-03-23 10:30:00
+WRK_AROUND_21,Manual Payroll Adjustment,Payroll team manually adjusted the salary for the affected employee.,2025-03-20 09:00:00,2025-03-20 09:00:00
+WRK_AROUND_22,Password Reset via Admin,IT helpdesk manually reset the employee portal password for the user.,2025-03-20 10:15:00,2025-03-20 10:15:00
+WRK_AROUND_23,Temporary Access Granted,Temporary read access granted to the HR documents share for the new hire.,2025-03-20 11:30:00,2025-03-20 11:30:00
+WRK_AROUND_24,Time Entry Approved Manually,HR administrator manually approved the time entry for the employee.,2025-03-21 13:45:00,2025-03-21 13:45:00
+WRK_AROUND_25,Application Restarted,IT support restarted the Recruitment Application Server to resolve the error.,2025-03-21 15:00:00,2025-03-21 15:00:00
+WRK_AROUND_26,Benefits Enrollment Form Provided Manually,HR provided a manual benefits enrollment form to the employee.,2025-03-22 16:15:00,2025-03-22 16:15:00
+WRK_AROUND_27,Report Generated from Backup,HR analytics team generated the required report from a backup of the reporting server.,2025-03-22 17:30:00,2025-03-22 17:30:00
+WRK_AROUND_28,Email Forwarding Enabled,IT enabled temporary email forwarding for the HR department's shared account.,2025-03-23 08:00:00,2025-03-23 08:00:00
+WRK_AROUND_29,Laptop Replaced Temporarily,IT replaced the HR Manager's laptop with a temporary loaner.,2025-03-23 09:15:00,2025-03-23 09:15:00
+WRK_AROUND_30,Direct Database Update,A database administrator directly updated the payroll database to correct an error.,2025-03-23 10:30:00,2025-03-23 10:30:00

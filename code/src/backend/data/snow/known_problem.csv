@@ -1,0 +1,31 @@
+id,name,description,cmdb_ci_id,status,created_date,updated_date
+KWN_ISSUE_0001,High CPU Usage on Web Server,Web server consistently showing high CPU utilization impacting performance.,CMDBCI0001,Investigating,2025-03-18 14:00:00,2025-03-19 10:00:00
+KWN_ISSUE_0002,Database Connection Errors,Application intermittently failing to connect to the database server.,CMDBCI0002,Open,2025-03-19 16:30:00,2025-03-20 09:30:00
+KWN_ISSUE_0003,Network Connectivity Issues,Users in a specific location experiencing intermittent network connectivity problems.,CMDBCI0003,Analyzing,2025-03-20 11:00:00,2025-03-21 15:00:00
+KWN_ISSUE_0004,Laptop Freezing Randomly,Several users reporting their laptops freezing without apparent reason.,CMDBCI0004,Pending Fix,2025-03-21 10:45:00,2025-03-22 12:45:00
+KWN_ISSUE_0005,Email Delivery Delays,Internal emails experiencing significant delivery delays.,CMDBCI0005,Monitoring,2025-03-22 13:15:00,2025-03-23 17:15:00
+KWN_ISSUE_0006,Firewall Blocking Legitimate Traffic,Firewall rules incorrectly blocking access to a critical external service.,CMDBCI0006,Resolved,2025-03-23 09:00:00,2025-03-23 14:00:00
+KWN_ISSUE_0007,Test Application Errors,Test application throwing frequent errors after recent code deployment.,CMDBCI0007,Investigating,2025-03-20 17:45:00,2025-03-21 08:45:00
+KWN_ISSUE_0008,Slow Performance on Storage Array,Applications relying on the storage array experiencing slow read/write speeds.,CMDBCI0008,Open,2025-03-21 19:00:00,2025-03-22 11:00:00
+KWN_ISSUE_0009,Desktop Application Crashing,A specific desktop application crashing frequently for multiple users.,CMDBCI0009,Analyzing,2025-03-22 20:30:00,2025-03-23 14:30:00
+KWN_ISSUE_00010,Load Balancer Not Distributing Evenly,Load balancer metrics showing uneven distribution of traffic across web servers.,CMDBCI00010,Pending Fix,2025-03-23 22:00:00,2025-03-24 16:00:00
+KWN_ISSUE_00011,Intermittent Trade Order Failures,Trading System Alpha is experiencing intermittent failures in processing trade orders.,CMDBCI00011,Investigating,2025-03-18 14:00:00,2025-03-19 10:00:00
+KWN_ISSUE_00012,Delayed Transaction Data Updates,Transaction Database Beta is showing delays in updating transaction records.,CMDBCI00012,Open,2025-03-19 16:30:00,2025-03-20 09:30:00
+KWN_ISSUE_00013,Incorrect Overnight Risk Calculation,Risk Management Server Gamma is producing incorrect overnight risk calculations.,CMDBCI00013,Analyzing,2025-03-20 11:00:00,2025-03-21 15:00:00
+KWN_ISSUE_00014,Customer Portal Login Issues,Some customers are reporting issues logging into the Customer Portal Web.,CMDBCI00014,Pending Fix,2025-03-21 10:45:00,2025-03-22 12:45:00
+KWN_ISSUE_00015,Payment Gateway Timeouts,Payment Gateway Delta is experiencing occasional timeouts during transaction processing.,CMDBCI00015,Monitoring,2025-03-22 13:15:00,2025-03-23 17:15:00
+KWN_ISSUE_00016,Report Generation Errors,Reporting Server Epsilon is failing to generate the end-of-day financial reports.,CMDBCI00016,Resolved,2025-03-23 09:00:00,2025-03-23 14:00:00
+KWN_ISSUE_00017,Mobile App Balance Display Issue,Mobile Banking App is incorrectly displaying account balances for some users.,CMDBCI00017,Investigating,2025-03-20 17:45:00,2025-03-21 08:45:00
+KWN_ISSUE_00018,Compliance System Alert Overload,Compliance Audit System Zeta is generating an unusually high volume of false positive alerts.,CMDBCI00018,Open,2025-03-21 19:00:00,2025-03-22 11:00:00
+KWN_ISSUE_00019,ATM Transaction Processing Errors,ATM Network Controller is experiencing errors in processing certain ATM transactions.,CMDBCI00019,Analyzing,2025-03-22 20:30:00,2025-03-23 14:30:00
+KWN_ISSUE_00020,High False Positives in Fraud Detection,Fraud Detection System Eta is reporting a high number of false positive fraud alerts.,CMDBCI00020,Pending Fix,2025-03-23 22:00:00,2025-03-24 16:00:00
+KWN_ISSUE_00021,HRIS Application Slowness,Users are experiencing intermittent slowness when using the HRIS application.,CMDBCI00021,Investigating,2025-03-18 14:00:00,2025-03-19 10:00:00
+KWN_ISSUE_00022,Payroll Slips Not Accessible Online,Employees are unable to access their payroll slips through the employee portal.,CMDBCI00022,Open,2025-03-19 16:30:00,2025-03-20 09:30:00
+KWN_ISSUE_00023,HR Shared Drive Permission Issues,Some HR staff are reporting incorrect permissions on the HR documents network share.,CMDBCI00023,Analyzing,2025-03-20 11:00:00,2025-03-21 15:00:00
+KWN_ISSUE_00024,Time Tracking System Errors,Users are encountering errors when submitting their time entries in the time tracking system.,CMDBCI00024,Pending Fix,2025-03-21 10:45:00,2025-03-22 12:45:00
+KWN_ISSUE_00025,Recruitment Application Login Issues,External candidates are reporting issues logging into the recruitment application.,CMDBCI00025,Monitoring,2025-03-22 13:15:00,2025-03-23 17:15:00
+KWN_ISSUE_00026,Benefits System Intermittent Errors,Employees are experiencing intermittent errors while trying to access the benefits administration system.,CMDBCI00026,Resolved,2025-03-23 09:00:00,2025-03-23 14:00:00
+KWN_ISSUE_00027,HR Reports Failing to Generate,Scheduled HR reports are failing to generate from the HR reporting server.,CMDBCI00027,Investigating,2025-03-20 17:45:00,2025-03-21 08:45:00
+KWN_ISSUE_00028,HR Department Email Account Not Receiving External Emails,The HR department's shared email account is not receiving emails from external senders.,CMDBCI00028,Open,2025-03-21 19:00:00,2025-03-22 11:00:00
+KWN_ISSUE_00029,HR Manager's Laptop Performance Issues,The HR Manager's laptop is running very slowly and applications are freezing.,CMDBCI00029,Analyzing,2025-03-22 20:30:00,2025-03-23 14:30:00
+KWN_ISSUE_00030,Payroll Processing Job Failing,The overnight payroll processing job is failing intermittently.,CMDBCI00030,Pending Fix,2025-03-23 22:00:00,2025-03-24 16:00:00
